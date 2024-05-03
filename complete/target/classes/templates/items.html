@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Inventory Items</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:href="@{/items.css}" rel="stylesheet" />
+</head>
+<body>
+    <div class="items-container">
+        <div th:each="item: ${items}">
+            <img th:src="@{/food.jpg}" height="150" />
+            <div class="item-element" th:text="${item.id}"></div>
+            <div class="item-element" th:text="${item.name}"></div>
+            <div class="item-element" th:text="${item.quantity}"></div>
+        </div>
+    </div>
+</body>
+</html>
